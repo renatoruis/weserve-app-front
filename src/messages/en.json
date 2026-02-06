@@ -22,7 +22,9 @@
     "nextEvent": "Next event",
     "latestSermon": "Latest sermon",
     "viewNotices": "Church notices",
-    "viewNoticesDesc": "See the latest announcements"
+    "viewNoticesDesc": "See the latest announcements",
+    "viewPrayers": "Prayer Requests",
+    "viewPrayersDesc": "Pray for the community and send your request"
   },
   "agenda": {
     "title": "Events",
@@ -80,7 +82,11 @@
   "push": {
     "enable": "Enable notifications",
     "hint": "Get notified about events and updates",
-    "subscribing": "Enabling..."
+    "subscribing": "Enabling...",
+    "bannerTitle": "Enable notifications",
+    "bannerDesc": "Don't miss any church events or updates",
+    "bannerButton": "Enable now",
+    "denied": "Notifications blocked. Enable them in your browser settings."
   },
   "share": {
     "shared": "Link copied!",

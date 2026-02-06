@@ -7,11 +7,12 @@ import BottomNav from "@/components/BottomNav";
 import SplashScreen from "@/components/SplashScreen";
 import ThemeProvider from "@/components/ThemeProvider";
 import InstallPWA from "@/components/InstallPWA";
+import NotificationBanner from "@/components/NotificationBanner";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Igreja App",
-  description: "App da igreja",
+  title: "Open Heavens",
+  description: "Open Heavens App",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -62,6 +63,7 @@ export default async function LocaleLayout({
                 {children}
               </main>
               <InstallPWA />
+              <NotificationBanner />
               <BottomNav />
             </SplashScreen>
           </ThemeProvider>

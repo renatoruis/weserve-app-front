@@ -3,6 +3,7 @@ import VerseCard from "@/components/VerseCard";
 import NextEventCard from "@/components/NextEventCard";
 import LatestSermonCard from "@/components/LatestSermonCard";
 import NoticesCard from "@/components/NoticesCard";
+import PrayersCard from "@/components/PrayersCard";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import LiveBanner from "@/components/LiveBanner";
 
@@ -19,12 +20,9 @@ export default function HomePage() {
 
         <div className="px-4 flex flex-col gap-3">
           <VerseCard />
-
-          <div className="grid grid-cols-2 gap-3">
-            <NextEventCard />
-            <LatestSermonCard />
-          </div>
-
+          <NextEventCard />
+          <LatestSermonCard />
+          <PrayersCard />
           <NoticesCard />
           <LanguageSwitcher />
         </div>

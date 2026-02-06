@@ -40,15 +40,16 @@ export default function LatestSermonCard() {
 
   return (
     <Link href="/sermoes" className="block group">
-      <div className="bg-[var(--color-surface)] rounded-2xl overflow-hidden shadow-sm active:scale-[0.97] transition-all duration-200 h-full">
+      <div className="bg-[var(--color-surface)] rounded-2xl overflow-hidden shadow-sm active:scale-[0.97] transition-all duration-200 flex">
+        {/* Thumbnail lateral */}
         {thumb ? (
-          <div className="relative h-24 overflow-hidden">
+          <div className="relative w-28 shrink-0 overflow-hidden">
             <img
               src={thumb}
               alt={sermon.title}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10" />
             {/* Play icon overlay */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center shadow-md">
@@ -59,14 +60,15 @@ export default function LatestSermonCard() {
             </div>
           </div>
         ) : (
-          <div className="h-24 bg-gradient-to-br from-[var(--color-card-dark)] to-[#3a3a3a] flex items-center justify-center">
+          <div className="w-28 shrink-0 bg-gradient-to-br from-[var(--color-card-dark)] to-[#3a3a3a] flex items-center justify-center">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
               <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
             </svg>
           </div>
         )}
-        <div className="p-3">
+        {/* Conteúdo */}
+        <div className="p-3 flex-1 min-w-0 flex flex-col justify-center">
           <p className="text-[10px] font-bold text-[var(--color-primary)] uppercase tracking-wider mb-1.5">
             {t("latestSermon")}
           </p>

@@ -36,18 +36,19 @@ export default function NextEventCard() {
 
   return (
     <Link href={`/agenda/${event.id}`} className="block group">
-      <div className="bg-[var(--color-surface)] rounded-2xl overflow-hidden shadow-sm active:scale-[0.97] transition-all duration-200 h-full">
+      <div className="bg-[var(--color-surface)] rounded-2xl overflow-hidden shadow-sm active:scale-[0.97] transition-all duration-200 flex">
+        {/* Imagem lateral */}
         {event.image_url ? (
-          <div className="relative h-24 overflow-hidden">
+          <div className="relative w-28 shrink-0 overflow-hidden">
             <img
               src={event.image_url}
               alt={event.title}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10" />
           </div>
         ) : (
-          <div className="h-24 bg-gradient-to-br from-[var(--color-card-dark)] to-[#3a3a3a] flex items-center justify-center">
+          <div className="w-28 shrink-0 bg-gradient-to-br from-[var(--color-card-dark)] to-[#3a3a3a] flex items-center justify-center">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
               <line x1="16" y1="2" x2="16" y2="6" />
@@ -56,7 +57,8 @@ export default function NextEventCard() {
             </svg>
           </div>
         )}
-        <div className="p-3">
+        {/* Conteúdo */}
+        <div className="p-3 flex-1 min-w-0 flex flex-col justify-center">
           <div className="flex items-center gap-2 mb-1.5">
             <div className="flex flex-col items-center bg-[var(--color-primary)]/10 rounded-lg px-2 py-0.5 min-w-[36px]">
               <span className="text-sm font-bold text-[var(--color-heading)] leading-tight">{day}</span>

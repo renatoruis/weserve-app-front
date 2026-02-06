@@ -22,7 +22,9 @@
     "nextEvent": "Próximo evento",
     "latestSermon": "Último sermão",
     "viewNotices": "Avisos da igreja",
-    "viewNoticesDesc": "Veja os últimos comunicados"
+    "viewNoticesDesc": "Veja os últimos comunicados",
+    "viewPrayers": "Pedidos de Oração",
+    "viewPrayersDesc": "Ore pela comunidade e envie seu pedido"
   },
   "agenda": {
     "title": "Agenda",
@@ -80,7 +82,11 @@
   "push": {
     "enable": "Ativar notificações",
     "hint": "Receba avisos de eventos e novidades",
-    "subscribing": "Ativando..."
+    "subscribing": "Ativando...",
+    "bannerTitle": "Ative as notificações",
+    "bannerDesc": "Não perca nenhum evento ou novidade da igreja",
+    "bannerButton": "Ativar agora",
+    "denied": "Notificações bloqueadas. Ative nas configurações do seu navegador."
   },
   "share": {
     "shared": "Link copiado!",
