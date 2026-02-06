@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
+/* ─── Nohemi Font ─── */
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Regular.woff2') format('woff2'),
+       url('/fonts/Nohemi-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Medium.woff2') format('woff2'),
+       url('/fonts/Nohemi-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-SemiBold.woff2') format('woff2'),
+       url('/fonts/Nohemi-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Bold.woff2') format('woff2'),
+       url('/fonts/Nohemi-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* ─── Theme Colors (configurable per church via backoffice) ─── */
+  /* primary_color  → --color-primary, --color-primary-dark, --color-nav-active */
+  /* heading_color  → --color-heading, --color-text, --color-nav-bg, --color-card-dark */
+  --color-primary: #C0DF16;
+  --color-primary-dark: #a8c410;
+  --color-heading: #242121;
+  --color-bg: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-surface-alt: #fafafa;
+  --color-text: #242121;
+  --color-text-secondary: #555555;
+  --color-text-muted: #9ca3af;
+  --color-border: #e5e7eb;
+  --color-nav-bg: #242121;
+  --color-nav-active: #C0DF16;
+  --color-nav-inactive: #777777;
+  --color-card-dark: #242121;
+  --radius: 1rem;
+  --font-family: 'Nohemi', system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+  overscroll-behavior-y: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+/* PWA standalone mode */
+@media all and (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Splash screen animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes loading-bar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.animate-loading-bar {
+  animation: loading-bar 1.5s ease-in-out;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 0.5rem;
 }

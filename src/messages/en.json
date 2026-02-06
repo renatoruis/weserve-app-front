@@ -1,0 +1,134 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "back": "Back",
+    "send": "Send",
+    "close": "Close",
+    "switchLang": "Change language",
+    "loadMore": "Load more"
+  },
+  "nav": {
+    "home": "Home",
+    "agenda": "Events",
+    "sermons": "Sermons",
+    "prayers": "Prayer",
+    "bible": "Bible",
+    "more": "More"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "verse": "Verse of the day",
+    "nextEvent": "Next event",
+    "latestSermon": "Latest sermon",
+    "viewNotices": "Church notices",
+    "viewNoticesDesc": "See the latest announcements"
+  },
+  "agenda": {
+    "title": "Events",
+    "noEvents": "No upcoming events",
+    "notFound": "Event not found",
+    "details": "Details",
+    "openMaps": "Open in Google Maps"
+  },
+  "sermons": {
+    "title": "Sermons",
+    "search": "Search sermons...",
+    "noSermons": "No sermons available",
+    "watchVideo": "Watch video",
+    "downloadPdf": "Download PDF",
+    "notFound": "Sermon not found",
+    "materials": "Materials",
+    "viewFile": "Open",
+    "seeMore": "See details"
+  },
+  "prayers": {
+    "title": "Prayer Requests",
+    "name": "Your name",
+    "phone": "Phone (optional)",
+    "phoneHint": "If you'd like to receive a prayer call",
+    "message": "Your request",
+    "public": "Public",
+    "private": "Private",
+    "submit": "Submit request",
+    "success": "Request submitted successfully!",
+    "noPrayers": "No prayer requests yet. Be the first!",
+    "newPrayer": "Request prayer",
+    "iPrayed": "I prayed",
+    "prayedCount": "{count} prayed",
+    "seeAll": "See all",
+    "tooMany": "Please wait a moment before submitting another request",
+    "communityPrayers": "Community in prayer"
+  },
+  "notices": {
+    "title": "Notices",
+    "noNotices": "No notices"
+  },
+  "bible": {
+    "title": "Bible",
+    "version": "Version",
+    "default": "Default",
+    "noVersions": "No versions configured",
+    "oldTestament": "Old Testament",
+    "newTestament": "New Testament"
+  },
+  "address": {
+    "title": "Location",
+    "openWaze": "Open in Waze",
+    "openMaps": "Open in Google Maps"
+  },
+  "push": {
+    "enable": "Enable notifications",
+    "hint": "Get notified about events and updates",
+    "subscribing": "Enabling..."
+  },
+  "share": {
+    "shared": "Link copied!",
+    "button": "Share"
+  },
+  "rsvp": {
+    "going": "I'm going",
+    "confirmed": "Confirmed!",
+    "count": "{count} going"
+  },
+  "bibleSearch": {
+    "placeholder": "Search passage (e.g. John 3:16)...",
+    "search": "Search",
+    "noResults": "No results found"
+  },
+  "bookmarks": {
+    "title": "Saved Verses",
+    "save": "Save",
+    "saved": "Saved!",
+    "remove": "Remove",
+    "noBookmarks": "No saved verses",
+    "shareVerse": "Share verse"
+  },
+  "more": {
+    "title": "More",
+    "about": "About",
+    "serviceTimes": "Service Times",
+    "socialMedia": "Social Media",
+    "notices": "Notices",
+    "location": "Location",
+    "shareAddress": "Share",
+    "donate": "Donate",
+    "donateDesc": "Support our mission",
+    "groups": "Groups / Cells",
+    "noGroups": "No groups available",
+    "sermons": "Sermons",
+    "prayers": "Prayer"
+  },
+  "groups": {
+    "title": "Groups & Cells",
+    "leader": "Leader",
+    "day": "Day",
+    "time": "Time",
+    "location": "Location",
+    "noGroups": "No groups available"
+  },
+  "live": {
+    "badge": "LIVE",
+    "watchNow": "Watch now"
+  }
+}

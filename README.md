@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Church App Frontend
 
-## Getting Started
+PWA mobile-first whitelabel para igrejas.
 
-First, run the development server:
+## Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Estilo:** Tailwind CSS v4
+- **Internacionalização:** next-intl (PT, EN)
+- **PWA:** @ducanh2912/next-pwa
+- **Imagens:** Sharp
+
+## Funcionalidades
+
+| Rota | Funcionalidade |
+|------|----------------|
+| `/` | Home (banner, live, versículo do dia, próximo evento, último sermão, avisos) |
+| `/biblia` | Leitor bíblico com versões, busca, bookmarks |
+| `/agenda` | Lista de eventos com paginação |
+| `/agenda/:id` | Detalhe do evento (RSVP) |
+| `/sermoes` | Lista de sermões com busca |
+| `/sermoes/:id` | Detalhe do sermão (YouTube, materiais) |
+| `/oracoes` | Pedidos de oração (criar, "eu orei") |
+| `/mais` | Sobre, horários, localização, grupos, doações, redes sociais |
+
+## Setup local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# 1. Copiar variáveis de ambiente
+cp .env.example .env.local
+
+# 2. Instalar dependências
+pnpm install
+
+# 3. Rodar o servidor de desenvolvimento
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O servidor inicia em `http://localhost:8000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variáveis de ambiente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variável | Descrição | Obrigatória |
+|----------|-----------|-------------|
+| `NEXT_PUBLIC_API_URL` | URL base da API backend | Sim |
+| `NEXT_PUBLIC_CHURCH_SLUG` | Slug identificador da igreja | Sim |
 
-## Learn More
+> **Nota:** Variáveis com prefixo `NEXT_PUBLIC_` são expostas ao browser por design do Next.js. Estas variáveis contêm apenas dados públicos (URL da API e identificador da igreja). **Nunca** adicione chaves secretas, tokens ou credenciais com este prefixo.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Vercel (recomendado)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Conecte o repositório na [Vercel](https://vercel.com)
+2. Configure as variáveis de ambiente no painel da Vercel:
+   - `NEXT_PUBLIC_API_URL`
+   - `NEXT_PUBLIC_CHURCH_SLUG`
+3. Deploy automático a cada push na branch `main`
 
-## Deploy on Vercel
+### Docker
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+docker build -t church-frontend .
+docker run -p 8000:8000 \
+  -e NEXT_PUBLIC_API_URL=https://api.exemplo.com \
+  -e NEXT_PUBLIC_CHURCH_SLUG=minha-igreja \
+  church-frontend
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## PWA - Gerar ícones
+
+Para regenerar os ícones do PWA a partir do `public/favicon.svg`:
+
+```bash
+node scripts/generate-icons.mjs
+```
+
+Gera automaticamente todos os tamanhos necessários (72, 96, 128, 144, 152, 192, 384, 512px) + apple-touch-icon + favicon.ico.
+
+## Estrutura do projeto
+
+```
+src/
+├── app/
+│   ├── [locale]/          # Páginas com suporte i18n
+│   ├── globals.css        # Estilos globais e tema
+│   └── layout.tsx         # Root layout
+├── components/            # Componentes reutilizáveis
+├── i18n/                  # Configuração next-intl
+├── lib/
+│   ├── api.ts             # Cliente API centralizado
+│   └── church.ts          # Helper do slug da igreja
+└── messages/              # Ficheiros de tradução (pt.json, en.json)
+```
+
+## Segurança
+
+- Variáveis de ambiente sensíveis **nunca** devem usar o prefixo `NEXT_PUBLIC_`
+- O ficheiro `.env.local` está no `.gitignore` e nunca deve ser commitado
+- A API URL e o church slug são dados públicos por natureza (visíveis no browser)
+- O honeypot no formulário de oração protege contra spam

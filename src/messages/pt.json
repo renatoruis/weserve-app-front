@@ -1,0 +1,134 @@
+{
+  "common": {
+    "loading": "A carregar...",
+    "error": "Ocorreu um erro",
+    "back": "Voltar",
+    "send": "Enviar",
+    "close": "Fechar",
+    "switchLang": "Mudar idioma",
+    "loadMore": "Carregar mais"
+  },
+  "nav": {
+    "home": "Início",
+    "agenda": "Agenda",
+    "sermons": "Sermões",
+    "prayers": "Oração",
+    "bible": "Bíblia",
+    "more": "Mais"
+  },
+  "home": {
+    "welcome": "Bem-vindo",
+    "verse": "Versículo do dia",
+    "nextEvent": "Próximo evento",
+    "latestSermon": "Último sermão",
+    "viewNotices": "Avisos da igreja",
+    "viewNoticesDesc": "Veja os últimos comunicados"
+  },
+  "agenda": {
+    "title": "Agenda",
+    "noEvents": "Sem eventos programados",
+    "notFound": "Evento não encontrado",
+    "details": "Detalhes",
+    "openMaps": "Abrir no Google Maps"
+  },
+  "sermons": {
+    "title": "Sermões",
+    "search": "Pesquisar sermões...",
+    "noSermons": "Sem sermões disponíveis",
+    "watchVideo": "Ver vídeo",
+    "downloadPdf": "Descarregar PDF",
+    "notFound": "Sermão não encontrado",
+    "materials": "Materiais",
+    "viewFile": "Abrir",
+    "seeMore": "Ver detalhes"
+  },
+  "prayers": {
+    "title": "Pedidos de Oração",
+    "name": "O seu nome",
+    "phone": "Telefone (opcional)",
+    "phoneHint": "Se deseja receber uma ligação de oração",
+    "message": "O seu pedido",
+    "public": "Público",
+    "private": "Privado",
+    "submit": "Enviar pedido",
+    "success": "Pedido enviado com sucesso!",
+    "noPrayers": "Nenhum pedido de oração ainda. Seja o primeiro!",
+    "newPrayer": "Pedir oração",
+    "iPrayed": "Eu orei",
+    "prayedCount": "{count} oraram",
+    "seeAll": "Ver todos",
+    "tooMany": "Aguarde um momento antes de enviar outro pedido",
+    "communityPrayers": "Comunidade em oração"
+  },
+  "notices": {
+    "title": "Avisos",
+    "noNotices": "Sem avisos"
+  },
+  "bible": {
+    "title": "Bíblia",
+    "version": "Versão",
+    "default": "Padrão",
+    "noVersions": "Nenhuma versão configurada",
+    "oldTestament": "Antigo Testamento",
+    "newTestament": "Novo Testamento"
+  },
+  "address": {
+    "title": "Localização",
+    "openWaze": "Abrir no Waze",
+    "openMaps": "Abrir no Google Maps"
+  },
+  "push": {
+    "enable": "Ativar notificações",
+    "hint": "Receba avisos de eventos e novidades",
+    "subscribing": "Ativando..."
+  },
+  "share": {
+    "shared": "Link copiado!",
+    "button": "Compartilhar"
+  },
+  "rsvp": {
+    "going": "Vou participar",
+    "confirmed": "Confirmado!",
+    "count": "{count} confirmados"
+  },
+  "bibleSearch": {
+    "placeholder": "Pesquisar passagem (ex: João 3:16)...",
+    "search": "Pesquisar",
+    "noResults": "Nenhum resultado encontrado"
+  },
+  "bookmarks": {
+    "title": "Versículos Favoritos",
+    "save": "Guardar",
+    "saved": "Guardado!",
+    "remove": "Remover",
+    "noBookmarks": "Nenhum versículo guardado",
+    "shareVerse": "Compartilhar versículo"
+  },
+  "more": {
+    "title": "Mais",
+    "about": "Sobre",
+    "serviceTimes": "Horários de Culto",
+    "socialMedia": "Redes Sociais",
+    "notices": "Avisos",
+    "location": "Localização",
+    "shareAddress": "Compartilhar",
+    "donate": "Contribuir",
+    "donateDesc": "Apoie a nossa missão",
+    "groups": "Células / Grupos",
+    "noGroups": "Nenhum grupo cadastrado",
+    "sermons": "Sermões",
+    "prayers": "Oração"
+  },
+  "groups": {
+    "title": "Células & Grupos",
+    "leader": "Líder",
+    "day": "Dia",
+    "time": "Horário",
+    "location": "Local",
+    "noGroups": "Nenhum grupo disponível"
+  },
+  "live": {
+    "badge": "AO VIVO",
+    "watchNow": "Assistir agora"
+  }
+}
