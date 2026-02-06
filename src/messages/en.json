@@ -130,5 +130,12 @@
   "live": {
     "badge": "LIVE",
     "watchNow": "Watch now"
+  },
+  "install": {
+    "title": "Install the App",
+    "description": "Add to your home screen for quick access",
+    "installButton": "Install App",
+    "buttonHint": "Quick access from home screen",
+    "iosInstructions": "Tap the share icon (square with arrow) then tap \"Add to Home Screen\""
   }
 }

@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import BottomNav from "@/components/BottomNav";
 import SplashScreen from "@/components/SplashScreen";
 import ThemeProvider from "@/components/ThemeProvider";
+import InstallPWA from "@/components/InstallPWA";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -60,6 +61,7 @@ export default async function LocaleLayout({
               <main className="min-h-screen max-w-lg mx-auto">
                 {children}
               </main>
+              <InstallPWA />
               <BottomNav />
             </SplashScreen>
           </ThemeProvider>

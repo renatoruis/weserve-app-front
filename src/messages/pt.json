@@ -130,5 +130,12 @@
   "live": {
     "badge": "AO VIVO",
     "watchNow": "Assistir agora"
+  },
+  "install": {
+    "title": "Instalar o App",
+    "description": "Adicione à sua tela inicial para acesso rápido",
+    "installButton": "Instalar App",
+    "buttonHint": "Acesso rápido na tela inicial",
+    "iosInstructions": "Toque no ícone de compartilhar (quadrado com seta) e depois em \"Adicionar à Tela de Início\""
   }
 }

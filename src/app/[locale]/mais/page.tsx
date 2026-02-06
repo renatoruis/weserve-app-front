@@ -8,6 +8,7 @@ import { getChurchSlug } from "@/lib/church";
 import NoticeList from "@/components/NoticeList";
 import MapSection from "@/components/MapSection";
 import PushOptIn from "@/components/PushOptIn";
+import { InstallButton } from "@/components/InstallPWA";
 
 interface ChurchData {
   name: string;
@@ -136,6 +137,9 @@ export default function MorePage() {
 
       {/* Push Notifications Opt-in */}
       <PushOptIn />
+
+      {/* Install App */}
+      <InstallButton />
 
       {/* About */}
       {church?.about_text && (
